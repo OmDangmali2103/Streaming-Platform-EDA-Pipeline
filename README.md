@@ -1,127 +1,243 @@
-🎬 Disney+ StreamLens — Data Cleaning, Preprocessing & EDA
-A streaming-catalog analytics project exploring Disney+ titles, content categories, release trends, genres, and maturity ratings.
+# 🎬 StreamLens
+### Data Cleaning, Preprocessing & Exploratory Data Analysis
 
-Disney+ StreamLens demonstrates a data-analysis workflow that takes a raw content catalogue through data preparation and exploratory analysis, then presents findings in business-friendly outputs. The project brings together Python, SQL, Excel, and Power BI resources to explore the catalogue from multiple analytical perspectives.
+Transforming raw streaming-platform data into structured, analysis-ready information and meaningful insights.
 
-🎯 Business Problem
-A streaming catalogue contains more than a list of titles. Its metadata can be used to understand the mix of movies and series, the distribution of genres and maturity ratings, and how the catalogue's release years are represented.
+---
 
-This project uses Disney+ catalogue metadata to explore questions such as:
-- What types of content appear in the catalogue?
-- How is content distributed across genres and maturity ratings?
-- What patterns appear across title release years?
-- Which data-quality issues need to be addressed before analysis?
-- How can cleaned catalogue data be converted into useful summaries and visualisations?
-The analysis is descriptive: catalogue metadata can show distributions and associations, but it does not by itself explain viewer preferences, viewing hours, revenue, or business performance.
+## 📌 Project Overview
 
-🧰 Tools & Technologies
-Python	Programmatic data inspection, preparation, and exploratory analysis
-Pandas	Tabular data manipulation and cleaning
-NumPy	Numerical and data-preparation operations, where used
-SQL	Structured querying and analysis of catalogue data
-Microsoft Excel	Spreadsheet-based examination and analysis
-Jupyter Notebook	Interactive, documented analytical workflow
+Raw datasets are rarely ready for analysis. Missing values, inconsistent text, incorrect data types, duplicate records, and poorly formatted dates can reduce data quality and lead to misleading conclusions.
 
+**Disney+ StreamLens** explores a Disney+ streaming catalogue dataset through data cleaning, preprocessing, and exploratory data analysis (EDA). The objective is to transform raw catalogue information into a more consistent and reliable dataset, then investigate patterns in content types, genres, release years, ratings, and other available attributes.
 
-The exact transformations, queries, formulas, and dashboard elements are documented in their respective project files. Only list a tool as a personal skill in a resume if you can explain and demonstrate the work you performed with it.
-🔄 Analysis Workflow
-Raw Disney+ Catalogue
-          │
-          ▼
-Dataset Inspection & Data-Quality Review
-          │
-          ▼
-Cleaning and Preprocessing
-(missing values, consistency, data types)
-          │
-          ▼
-Feature Preparation
-          │
-          ▼
-Exploratory Data Analysis
-          │
-          ▼
-SQL / Excel Analysis 
-          │
-          ▼
-Interpretation of Catalogue Patterns
+The project follows an important analytics principle:
 
-This diagram represents the overall workflow described by the project. Refer to the project files for the specific steps implemented in each tool.
+> **Reliable insights begin with reliable data.**
 
-🧹 Work Completed
-1. Data inspection and preparation
-The project includes a preprocessing stage intended to make the catalogue more consistent and suitable for analysis. Its scope includes:
-- Reviewing the dataset and its fields before analysis.
-- Handling missing data as part of data preparation.
-- Cleaning and standardising values where needed.
-- Preparing fields and derived features for later analysis.
-- Making the dataset easier to group, compare, and visualise.
-Why it matters: Results from inconsistent or incomplete source data can be misleading. Inspecting data quality before analysis helps make assumptions visible and improves the interpretability of downstream results.
-2. Exploratory data analysis (EDA)
-The analysis focuses on the following catalogue dimensions:
-Analysis area	What it helps examine
-Content distribution	The composition of the catalogue, including content categories such as movies and series where represented in the data
-Release-year trends	How catalogue titles are distributed across release years
-Genres	The genre labels represented in the catalogue and their relative frequency
-Maturity ratings	The distribution of content rating categories
+Rather than jumping directly into visualizations, the workflow emphasizes understanding the data, identifying quality issues, making appropriate cleaning decisions, and validating the resulting dataset before drawing conclusions.
 
+## 🎯 Business Problem
 
-These analyses support descriptive comparisons of the catalogue. Numerical totals and rankings should be quoted only from results reproduced from the project files.
-3. Multi-tool analysis and presentation
-The repository separates work into Python, SQL, Excel, Power_BI, Data, and Presentation folders. This structure makes the different project assets easier to locate and supports examining the same business topic through code, queries, spreadsheets, and visual reporting.
+Streaming platforms offer large and diverse content catalogues. Analyzing this information can help answer questions about the composition of a catalogue, the distribution of content across genres, and changes in release patterns over time.
 
-Use each folder's files to verify the specific queries, formulas, charts, and transformations included in your version of the project.
-📈 Analytical Outcomes
-The project is designed to produce a clearer, analysis-ready view of the Disney+ title catalogue and to organise the investigation into four main outcome areas:
-1. Data quality: A documented preprocessing stage for addressing missing or inconsistent catalogue information before using the data for analysis.
-2. Catalogue composition: A view of how titles are distributed across available content categories.
-3. Temporal patterns: An exploration of how titles are represented across release years.
-4. Genre and rating profile: Comparisons of the genre labels and maturity-rating categories present in the catalogue.
-What these outcomes can support
-- Summarising the composition of a streaming catalogue.
-- Comparing the frequency of categories and genre labels.
-- Identifying release-year patterns that may warrant further investigation.
-- Preparing cleaner, more consistent data for reporting.
-- Communicating exploratory findings through tables, charts, and dashboards.
-Interpretation note: This dataset describes catalogue metadata. Unless separate viewing or engagement data is included and analysed, it cannot establish which titles are most watched, most profitable, or most preferred by audiences. Correlation or frequency alone should not be described as causation or customer behaviour.
-Add verified results here
-To make this section stronger for a portfolio review, record the actual outputs produced by your notebook, SQL scripts, Excel analysis, or Power BI report:
-- Dataset size: [verified number of rows] rows × [verified number of columns] columns.
-- Data-quality checks: [verified number/type of issues found and how they were handled].
-- Content mix: [verified count or percentage by content type].
-- Genre result: [verified leading genre/category and its count or percentage].
-- Release-year result: [verified year or period and the supported observation].
-- Rating result: [verified rating distribution observation].
-Replace every bracketed field with a result reproduced from the project. Remove any item that the current files do not calculate. Do not leave placeholders in the published README.
+This project investigates the following questions:
 
+- What types of content are represented in the dataset?
+- How is content distributed across genres?
+- What patterns can be observed in release years?
+- How are ratings and other categorical attributes distributed?
+- Which data-quality issues must be addressed before analysis?
+- How can the cleaned dataset support reliable downstream reporting?
 
-🧠 Skills Demonstrated
-The project can serve as a practical learning example for:
-- Data inspection and data-quality awareness
-- Missing-value handling and preprocessing decisions
-- Tabular data manipulation with Python and Pandas
+These are exploratory questions. The dataset alone does not establish viewership, audience engagement, popularity, or business performance.
+
+---
+
+## 🔄 Project Workflow
+
+```text
+Raw Disney+ Catalogue Dataset
+             │
+             ▼
+      Data Inspection
+             │
+             ▼
+   Data Quality Assessment
+             │
+             ▼
+     Data Cleaning
+             │
+             ▼
+  Type Conversion & Standardization
+             │
+             ▼
+    Data Validation
+             │
+             ▼
+ Exploratory Data Analysis (EDA)
+             │
+             ▼
+  Visualizations & Findings
+             │
+             ▼
+   Analysis-Ready Dataset
+```
+
+## 🧹 1. Data Cleaning & Preprocessing
+
+The first stage focuses on identifying and addressing data-quality issues before performing exploratory analysis.
+
+### Data inspection
+- Examine the dataset's structure, columns, and data types.
+- Inspect missing values and duplicate records.
+- Identify inconsistent or incorrectly formatted values.
+- Review date-related columns and categorical attributes.
+
+### Data cleaning
+- **Missing values:** Assess null values and apply appropriate handling based on the affected column.
+- **Duplicate records:** Check for duplicate entries and remove them where appropriate.
+- **Date formatting:** Convert valid date values into suitable datetime formats where required.
+- **Text standardization:** Improve consistency in categorical text values.
+- **Data types:** Ensure columns use appropriate types for analysis.
+- **Data validation:** Check the cleaned data for remaining inconsistencies and unexpected values.
+
+Cleaning decisions should preserve meaningful information. Missing values are not automatically errors, and duplicate-looking records should be investigated before removal.
+
+## 🐍 2. Python-Based Data Analysis
+
+Python provides the primary environment for working with the dataset.
+
+| Library | Purpose |
+|---|---|
+| **Pandas** | Data inspection, filtering, cleaning, transformation, and aggregation |
+| **NumPy** | Numerical operations and analytical support |
+| **Matplotlib** | Creating charts and visual representations |
+| **Seaborn** | Statistical visualization and distribution analysis |
+
+The workflow separates data preparation from exploratory analysis so that visualizations are based on a consistent dataset.
+
+## 📊 3. Exploratory Data Analysis
+
+After preparing the data, EDA is used to understand its structure and investigate patterns in the streaming catalogue.
+
+### Content type analysis
+
+Examine the distribution of available content types, such as movies and television shows, where those categories exist in the dataset.
+
+**Analytical purpose:** Understand the composition of the catalogue and compare the relative representation of content types.
+
+### Genre analysis
+
+Explore genre categories and their representation across the catalogue.
+
+**Analytical purpose:** Identify commonly represented genres and understand how catalogue content is distributed across classifications.
+
+### Release-year analysis
+
+Investigate the distribution of release years and changes in the number of catalogue entries across different periods.
+
+**Analytical purpose:** Understand the historical release profile of the available content.
+
+### Ratings analysis
+
+Examine the distribution of content ratings and identify the categories represented in the dataset.
+
+**Analytical purpose:** Understand the catalogue's content-rating composition. Content ratings should not be interpreted as audience satisfaction or viewer scores.
+
+### Data-quality analysis
+
+Inspect missing values, duplicates, data types, and categorical consistency before and after cleaning.
+
+**Analytical purpose:** Establish whether the dataset is sufficiently consistent for the intended analysis and identify limitations that should be documented.
+
+---
+
+## 💡 4. Project Outcomes & Business Interpretation
+
+The project is designed to deliver outcomes at two levels: **improved data readiness** and **better understanding of the catalogue**.
+
+### Outcome 1 — A more analysis-ready dataset
+
+Data cleaning and preprocessing help standardize the dataset's structure, improve consistency, and reduce avoidable data-quality problems.
+
+**Why it matters:** Reliable downstream analysis depends on using appropriate data types, understanding missing values, and applying consistent transformations.
+
+### Outcome 2 — A clearer picture of catalogue composition
+
+Content-type and genre analysis provide a structured view of how the catalogue is represented.
+
+**Why it matters:** Such analysis can help catalogue analysts describe the available content and identify areas worth investigating further.
+
+### Outcome 3 — Better understanding of release patterns
+
+Analyzing release-year distributions helps reveal how catalogue entries are spread across time periods.
+
+**Why it matters:** This can support descriptive reporting about catalogue composition, although release dates alone cannot establish why content was added or how well it performed.
+
+### Outcome 4 — More informed interpretation of ratings
+
+Examining rating categories helps describe the maturity classifications represented in the dataset.
+
+**Why it matters:** It enables a more accurate understanding of the catalogue's classification profile without confusing content ratings with audience reviews.
+
+### Outcome 5 — A reproducible analytical foundation
+
+Separating inspection, cleaning, validation, and EDA creates a workflow that can be reviewed and repeated.
+
+**Why it matters:** A documented workflow is easier to debug, maintain, extend, and reuse when working with updated datasets.
+
+> **Results transparency:** Numerical findings—such as the number of rows cleaned, missing values resolved, content-type percentages, most common genres, and release-year trends—should be added after checking the actual notebook outputs. No numerical outcomes are claimed here without verification.
+
+---
+
+## 🧠 5. Skills Demonstrated
+
+This project provides practical exposure to:
+
+- Python for data analysis
+- Data wrangling using Pandas and NumPy
+- Missing-value and duplicate assessment
+- Date and data-type handling
+- Categorical data standardization
+- Data-quality validation
 - Exploratory data analysis
-- Categorical and time-based analysis
-- SQL-based querying, where implemented
-- Spreadsheet analysis and business reporting
-- Communicating findings through visualisation
-Be prepared to explain not just the function or tool used, but why a transformation was appropriate, what alternatives existed, and how the result was validated.
+- Statistical and categorical visualization
+- Analytical reasoning and interpretation
+- Documenting data preparation decisions
 
-⚠️ Limitations
-- The analysis is limited to the fields provided in the catalogue dataset.
-- Catalogue metadata alone does not measure watch time, audience satisfaction, revenue, or subscriber retention.
-- Missing-value treatment may affect interpretation; each treatment should be justified in the corresponding code or documentation.
-- Any summary finding should be checked against the underlying data and analysis output before being presented as a factual result.
-  
-🔭 Possible Improvements
-- Add a reproducible run order and a dependency file for the Python workflow.
-- Record before-and-after data-quality metrics, such as missing-value counts and duplicate counts.
-- Export an explicitly named cleaned dataset while preserving the raw source file.
-- Add automated validation checks for expected columns, data types, and key uniqueness assumptions.
-- Document the most important SQL queries and explain what each result means.
-- Add screenshots of the actual Power BI report and concise explanations of the visuals.
-- Include verified quantitative findings in this README instead of broad claims.
+The emphasis is on understanding why a transformation is needed, not simply applying a function to the dataset.
 
+*The structure above summarizes the repository's main areas. Consult the actual folders for their specific files and implementation details.*
 
-This README summarises the project scope and analysis areas described by the repository. Preserve attribution to the original authors, check the source repository's license, and state clearly which changes or extensions you personally implemented.
-Project takeaway: StreamLens illustrates how catalogue data can be cleaned, explored, and prepared for reporting. The main deliverable is an analytical workflow for investigating data quality and describing content, release-year, genre, and maturity-rating patterns—not a measurement of actual audience engagement.
+## 🚀 6. How to Explore the Project
+
+### Prerequisites
+
+- Python 3
+- Jupyter Notebook or VS Code with notebook support
+- pandas
+- numpy
+- matplotlib
+- seaborn
+
+### Steps
+
+1. Clone or download the repository.
+2. Open the Python analysis files in VS Code or Jupyter Notebook.
+3. Install the required Python libraries in your environment.
+4. Review the raw dataset and the documented data-quality issues.
+5. Execute the analysis in the intended order, starting with inspection and cleaning.
+6. Review the resulting visualizations and validate the findings against the data.
+
+Additional tools included in the repository may require their own setup and should be explored according to the files provided.
+
+## ⚠️ 7. Limitations & Responsible Interpretation
+
+- Findings describe the dataset being analyzed; they do not automatically generalize to all streaming platforms.
+- Catalogue data does not, by itself, establish viewing behavior, customer preferences, engagement, or revenue.
+- Cleaning decisions can affect analytical results and should be documented.
+- Correlation or co-occurrence should not be interpreted as causation.
+- Numerical claims should be traceable to reproducible calculations.
+
+## 🔮 8. Potential Improvements
+
+Possible future enhancements include:
+
+- Add automated data-quality checks and a before-and-after cleaning summary.
+- Create a repeatable preprocessing script that exports a validated, cleaned CSV.
+- Add verified numerical findings and supporting visualizations.
+- Introduce logging and exception handling for more robust data preparation.
+- Add automated tests for critical cleaning rules.
+- Document how the workflow can be rerun when the source dataset changes.
+
+These are potential extensions, not claims about features already implemented.
+
+---
+
+## 📌 Conclusion
+
+**StreamLens** demonstrates the importance of data preparation as a foundation for analytics. By combining data inspection, cleaning, validation, and exploratory analysis, the project establishes a structured approach to turning raw catalogue data into information that can be interpreted more reliably.
+
+Its core value is not simply producing charts—it is making the data more consistent, understanding its limitations, and using evidence to describe patterns in the catalogue.
+
