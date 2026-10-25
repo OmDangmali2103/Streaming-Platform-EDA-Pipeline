@@ -9,7 +9,7 @@ Transforming raw streaming-platform data into structured, analysis-ready informa
 
 Raw datasets are rarely ready for analysis. Missing values, inconsistent text, incorrect data types, duplicate records, and poorly formatted dates can reduce data quality and lead to misleading conclusions.
 
-**Disney+ StreamLens** explores a Disney+ streaming catalogue dataset through data cleaning, preprocessing, and exploratory data analysis (EDA). The objective is to transform raw catalogue information into a more consistent and reliable dataset, then investigate patterns in content types, genres, release years, ratings, and other available attributes.
+**StreamLens** explores a Disney+ streaming catalogue dataset through data cleaning, preprocessing, and exploratory data analysis (EDA). The objective is to transform raw catalogue information into a more consistent and reliable dataset, then investigate patterns in content types, genres, release years, ratings, and other available attributes.
 
 The project follows an important analytics principle:
 
